@@ -1,4 +1,5 @@
 window.onload = function () {
+
     "use strict";
     var h = document.getElementsByTagName('h1')[0];
     var report = 0;
@@ -36,12 +37,12 @@ window.onload = function () {
                 }
             }, 0) / frequencyArray.length;
 
-            if (loudness > 80) {
-                avatar.src = avatar.getAttribute("yelling");
-            } else if (loudness > 60) {
-                avatar.src = avatar.getAttribute("normal");
+            if (loudness > settings.image03.loudness) {
+                avatar.src = settings.image03.path;
+            } else if (loudness > settings.image02.loudness) {
+                avatar.src = settings.image02.path;
             } else {
-                avatar.src = avatar.getAttribute("idle");
+                avatar.src = settings.image01.path;
             }
 
         }
@@ -54,11 +55,11 @@ window.onload = function () {
         console.log(error);
     }
 
-    /*window.navigator = window.navigator || {};
-    /*navigator.getUserMedia =  navigator.getUserMedia       ||
-                              navigator.webkitGetUserMedia ||
-                              navigator.mozGetUserMedia    ||
-                              null;*/
+    // window.navigator = window.navigator || {};
+    // navigator.getUserMedia =  navigator.getUserMedia       ||
+    //                           navigator.webkitGetUserMedia ||
+    //                           navigator.mozGetUserMedia    ||
+    //                           null;
     navigator.getUserMedia({audio:true}, soundAllowed, soundNotAllowed);
 
 };
