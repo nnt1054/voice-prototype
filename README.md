@@ -1,9 +1,9 @@
 # voice-prototype
 
-# hello these instructions only work with OBS Studio for now
+### hello these instructions only work with OBS Studio for now
 
 # Setting Up:
-1. Download the latest .zip release from Github
+1. Download the latest .zip release from here: https://github.com/nnt1054/voice-prototype/releases
     * extract contents to a location on your computer
 3. Move the photos/gifs you plan to use to the `images/` folder
 4. Edit the settings.js file
