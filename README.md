@@ -16,5 +16,7 @@
 6. Add new Browser Source to your Scene
     * Checkmark Local file setting
     * Browser to where you extracted the voice-prototype contents and select the `index.html` file
+    * Adjust the Browser Source height/width to crop to your image
+    * User Filter settings to add chroma key and other settings as desired
  
  probably hopefully should work \o/
