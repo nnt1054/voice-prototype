@@ -44,7 +44,7 @@ window.onload = function () {
             } else {
                 avatar.src = settings.image01.path;
             }
-
+            console.log(loudness)
         }
         // setInterval(doDraw, 10);
         doDraw();
@@ -60,6 +60,15 @@ window.onload = function () {
     //                           navigator.webkitGetUserMedia ||
     //                           navigator.mozGetUserMedia    ||
     //                           null;
-    navigator.getUserMedia({audio:true}, soundAllowed, soundNotAllowed);
+    // navigator.getUserMedia({audio:true}, soundAllowed, soundNotAllowed);
+    navigator.mediaDevices.getUserMedia({
+              audio: {
+                echoCancellation: false,
+                noiseSuppression: false,
+                autoGainControl: false,
+              }
+          })
+        .then(soundAllowed)
+        .catch(soundNotAllowed);
 
 };
